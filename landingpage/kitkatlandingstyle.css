@@ -1,0 +1,116 @@
+#header {
+    width: 100%;
+    background-color: #c0a9aa;
+    padding: 0.5rem 0rem;
+    margin: 0 0;
+}
+
+#header h1{
+    color: #1B191D;
+    text-align: center;
+    font-family: cursive;
+    font-size: 300%;
+}
+
+#main {
+    width: 100%;
+    background-color: #DED2D1;
+    padding: 0.1rem 0rem;
+    text-align: center;
+    font-family: cursive;
+}
+
+    #main p a.a {
+        color: #1B191D;
+        font-size: 1000%;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
+    #main p a.b {
+        color: red;
+        font-size: 2300%; 
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
+    #main p a.c {
+        color: black;
+        font-size: 1000%;
+    }
+   
+    a:link {
+        text-decoration: none;
+    }
+
+    /*a:hover {
+        display: none;
+    }*/
+
+    .a:hover::before {
+        content: "Project!";
+        font-size: 50%;
+        text-decoration: underline;
+    }
+
+    .b:hover::before {
+        content: "Portfolio!";
+        font-size: 50%;
+        text-decoration: underline;
+    }
+
+    .c:hover::before {
+        content: "Ratings";
+        font-size: 50%;
+        text-decoration: underline;
+    }
+    
+    .a:hover span {
+        display: none;
+    }
+
+    .b:hover span {
+        display: none;
+    }
+
+    .c:hover span {
+        display: none;
+    }
+    
+    #main p.sub {
+        font-size: 200%;
+        color:black;
+    }
+    
+
+/*#logo {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: auto;
+    border-radius: 100%;
+}*/
+
+/*#figcaption {
+    text-align: center;
+    font-family: fantasy;
+    color: #1B191D;
+
+}*/
+
+
+#footer {
+    width: 100%;
+    background-color: #C0a9aa;
+    padding: 2.2rem 0rem;
+    text-align: center;
+}
+
+#footer input[type=submit] {
+    width: 20%;
+    font-size: 200%;
+    border-radius: 20%;
+    font-family: cursive;
+    background-color: #DED2D1;
+    /*border: 3px outset black;*/
+}
