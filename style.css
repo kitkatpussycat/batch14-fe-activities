@@ -1,0 +1,61 @@
+body {
+    text-align: center;
+}
+
+#main {
+    margin: 0px 8px;
+    padding: 15px;
+    border-radius: 50px;
+    background: pink;
+}
+
+#title {
+    font-family: fantasy;
+    color: royalblue;
+    font-size: 500%;
+}
+
+img {
+    max-width: 100%; 
+    display: block;
+    height: auto;
+    margin: auto;
+   /* border-radius: 50px;*/
+}
+
+#img-div {
+    background: royalblue;
+    padding: 10%;
+    margin: 0% 10%;
+    /*border-radius: 100px;*/
+}
+
+#img-caption {
+    font-weight: bolder;
+}
+
+#tribute-info {
+    background-color: blanchedalmond;
+    margin: 0% 10%;
+    font-family: cursive;
+}
+
+
+ul {
+    max-width: fit-content;
+    margin: 0 auto 50px auto;
+    text-align: left;
+}
+
+li {
+    margin: 15px 0px;
+}
+
+#tribute-infoll {
+    background-color: burlywood;
+    margin: 0% 10%;
+    font-family: cursive;
+}
+    #tribute-infoll p{
+        color: white;
+    }
