@@ -1,0 +1,73 @@
+body {
+    height: 100%;
+}
+
+#header {
+    width: 100%;
+    /*height: 100%;*/
+    background-color: #c0a9aa;
+    padding: 0.05em 0rem;
+    margin: 0 0;
+}
+
+#header h1{
+    color: #1B191D;
+    text-align: center;
+    font-family: cursive;
+    font-size: 3vw;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: #DED2D1;
+    padding: 0.1rem 0rem;
+    text-align: center;
+    font-family: cursive;
+}
+
+
+    
+    #main p.sub {
+        font-size: 3vw;
+        color:black;
+    }
+    
+.onediv {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/*#logo {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: auto;
+    border-radius: 100%;
+}*/
+
+/*#figcaption {
+    text-align: center;
+    font-family: fantasy;
+    color: #1B191D;
+
+}*/
+
+
+#footer {
+    width: 100%;
+    /*height: 100%;*/
+    background-color: #C0a9aa;
+    padding: 3rem 0rem;
+    text-align: center;
+}
+
+#footer input[type=submit] {
+    width: 20vw;
+    font-size: 2vw;
+    border-radius: 20%;
+    font-family: cursive;
+    background-color: #DED2D1;
+    /*border: 3px outset black;*/
+}
