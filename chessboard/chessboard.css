@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+h1{
+    text-align: center;
+}
+*{
+    box-sizing: border-box; /*key sa pagsame ng size kada box*/
+    margin: 0;
+    padding: 0;
+}
+
+.board{
+    min-width: 40vw; /*need kasi may wrap tayo*/
+    max-width: 40vw; /*need kasi may wrap tayo*/
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+    .box1 {
+        width: 5vw;
+        height: 5vw;
+        border: 1px solid;
+        text-align: center;
+        background-color: pink;
+        font-weight: bold;
+        font-size: 4vw;
+    }
+    .box2 {
+        width: 5vw;
+        height: 5vw;
+        border: 1px solid;
+        text-align: center;
+        background-color: aqua;
+        font-weight: bold;
+        font-size: 4vw;
+    }
+
+    span {
+        color: white;
+    }
