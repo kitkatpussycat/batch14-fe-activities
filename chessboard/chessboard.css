@@ -1,12 +1,30 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+   
 }
 
-h1{
-    text-align: center;
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.title h1{
+    color: black;
+    font-size: 5vmin;
+    font-weight: bold;
+}
+
+.title span{
+    color:black;
+    font-size: 3vmin;
+    font-style: italic;
+}
+
 *{
     box-sizing: border-box; /*key sa pagsame ng size kada box*/
     margin: 0;
@@ -14,34 +32,43 @@ h1{
 }
 
 .board{
-    min-width: 40vw; /*need kasi may wrap tayo*/
-    max-width: 40vw; /*need kasi may wrap tayo*/
+    min-width: 80.5vmin; /*need kasi may wrap tayo.. (10*8)+0.25+0.25 = 80.5*/
+    max-width: 80.5vmin; /*need kasi may wrap tayo*/
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    border: 0.25vmin solid;
 }
 
     .box1 {
-        width: 5vw;
-        height: 5vw;
-        border: 1px solid;
+        width: 10vmin;
+        height: 10vmin;
+        border: 0px solid;
         text-align: center;
-        background-color: pink;
+        background-color: rgb(194, 192, 173);
         font-weight: bold;
-        font-size: 4vw;
+        font-size: 8vmin;
     }
     .box2 {
-        width: 5vw;
-        height: 5vw;
-        border: 1px solid;
+        width: 10vmin;
+        height: 10vmin;
+        border: 0px solid;
         text-align: center;
-        background-color: aqua;
+        background-color: green;
         font-weight: bold;
-        font-size: 4vw;
+        font-size: 8vmin;
     }
 
     span {
         color: white;
+        animation-name: sample;
+        animation-duration: 4s;
     }
+
+       /* @keyframes sample {
+            from {color: white;}
+            to {color: red;}
+        }*/
+    
