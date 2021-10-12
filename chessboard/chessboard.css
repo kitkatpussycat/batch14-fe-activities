@@ -4,6 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-image: linear-gradient(45deg, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
+    opacity: 100%;
 }
 
 *{
@@ -22,7 +24,8 @@ body {
     margin-top: 5vh;;
     padding: 1vh 1vw;
     padding-bottom: 2vh;
-    background-color: rgb(175, 159, 130);    
+    background-color: #D65DB1;
+    opacity: 100%;   
 }
 /*
 .title {
@@ -34,7 +37,7 @@ body {
 }*/
 
 .container h1{
-    color: black;
+    color: #F9F871;
     font-size: 5vmin;
     font-weight: bold;
 }
@@ -66,7 +69,7 @@ body {
         height: 10vmin;
         border: 0px solid;
         text-align: center;
-        background-color: rgb(194, 192, 173);
+        background-color: #845EC2;
         font-weight: bold;
         font-size: 8vmin;
     }
@@ -75,7 +78,7 @@ body {
         height: 10vmin;
         border: 0px solid;
         text-align: center;
-        background-color: green;
+        background-color: #FF6F91;
         font-weight: bold;
         font-size: 8vmin;
     }
@@ -100,10 +103,10 @@ body {
             position: relative;
             /* background-color: red; */
             /* transition: position 2s; */
-            animation-name: pawn-movew;
-            animation-duration: 12s;
-            animation-delay: 3s;
-            animation-iteration-count: infinite;
+            animation: pawn-movew 10s linear forwards;
+           /* animation-name: pawn-movew;
+            animation-duration: 10s;*/
+            animation-delay: 0s;   
          }
 
       /*  #horse-white {
@@ -120,6 +123,7 @@ body {
             10% {top: 100%;}
             20% {top: 200%;}
             30% {top: 200%;}
+            100% {top: 200%;}
             /*40% {top: 200%; left: 0%;}
             50% {top: 200%; left: 100%;}*/ /*pang horse na mo*/
          }
@@ -128,10 +132,10 @@ body {
             position: relative;
             /* background-color: red; */
             /* transition: position 2s; */
-            animation-name: pawn-moveb;
-            animation-duration: 12s;
-            animation-delay: 3s;
-            animation-iteration-count: infinite;
+            animation: pawn-moveb 10s linear forwards;
+           /* animation-name: pawn-moveb;
+            animation-duration: 10s;*/
+            animation-delay: 3s;            
          }
         
          @keyframes pawn-moveb {
@@ -139,16 +143,17 @@ body {
             10% {bottom: 100%;}
             20% {bottom: 200%;}
             30% {bottom: 200%;}
+            100% {bottom: 200%;}
          }
 
          #bishop-white {
             position: relative;
             /* background-color: red; */
             /* transition: position 2s; */
-            animation-name: bishop-move;
-            animation-duration: 8s; /*pawn duration + pawn delay - bishop delay*/
-            animation-delay: 9s;
-            animation-iteration-count: infinite;
+            animation: bishop-move 10s linear forwards;
+            /*animation-name: bishop-move;
+            animation-duration: 10s; /*pawn duration + pawn delay - bishop delay*/
+            animation-delay: 6s;
          }
       
          @keyframes bishop-move {
@@ -157,5 +162,41 @@ body {
             10% {top: 200%; left: 200%;}
             20% {top: 300%; left: 300%;}
             30% {top: 400%; left: 400%;}
+            100% {top: 400%; left: 400%;}
          }
+
+           #horser-black {
+            position: relative;
+             /*background-color: red; */
+             /*transition: position 2s; */
+            animation: horse-move 10s linear forwards;
+            animation-delay: 9s;
+         }
+
+         @keyframes horse-move {
+            0% {bottom: 0%;}
+            10% {bottom: 100%;}
+            20% {bottom: 200%;}
+            30% {bottom: 200%; right: 0%;}
+            40% {bottom: 200%; right: 100%;}
+            100% {bottom: 200%; right: 100%;}
+         }
+
+         #queen-white {
+            position: relative;
+            /* background-color: red; */
+            /* transition: position 2s; */
+            animation: queen-move 10s linear forwards;
+            animation-delay: 15s;   
+         }
+         
+         @keyframes queen-move {
+            0% {top: 0%;}
+            10% {top: 100%;}
+            20% {top: 200%;}
+            30% {top: 200%;}
+            100% {top: 200%;}
+         }
+
+
     
