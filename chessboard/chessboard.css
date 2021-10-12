@@ -96,12 +96,13 @@ body {
 
 
 
-        #phon-white {
+        #pawn-white {
             position: relative;
             /* background-color: red; */
             /* transition: position 2s; */
-            animation-name: phonw-move;
-            animation-duration: 5s;
+            animation-name: pawn-movew;
+            animation-duration: 12s;
+            animation-delay: 3s;
             animation-iteration-count: infinite;
          }
 
@@ -114,7 +115,7 @@ body {
             animation-iteration-count: infinite;
          } */
          
-         @keyframes phonw-move {
+         @keyframes pawn-movew {
             0% {top: 0%;}
             10% {top: 100%;}
             20% {top: 200%;}
@@ -123,16 +124,17 @@ body {
             50% {top: 200%; left: 100%;}*/ /*pang horse na mo*/
          }
 
-         #phon-black {
+         #pawn-black {
             position: relative;
             /* background-color: red; */
             /* transition: position 2s; */
-            animation-name: phonb-move;
-            animation-duration: 5s;
+            animation-name: pawn-moveb;
+            animation-duration: 12s;
+            animation-delay: 3s;
             animation-iteration-count: infinite;
          }
         
-         @keyframes phonb-move {
+         @keyframes pawn-moveb {
             0% {bottom: 0%;}
             10% {bottom: 100%;}
             20% {bottom: 200%;}
@@ -144,8 +146,8 @@ body {
             /* background-color: red; */
             /* transition: position 2s; */
             animation-name: bishop-move;
-            animation-duration: 30s;
-            animation-delay: 20s;
+            animation-duration: 8s; /*pawn duration + pawn delay - bishop delay*/
+            animation-delay: 9s;
             animation-iteration-count: infinite;
          }
       
@@ -155,6 +157,5 @@ body {
             10% {top: 200%; left: 200%;}
             20% {top: 300%; left: 300%;}
             30% {top: 400%; left: 400%;}
-            100% {top: 400%; left: 400%;}
          }
     
