@@ -3,43 +3,62 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+    overflow: hidden;
 }
 
+*{
+   box-sizing: border-box; /*key sa pagsame ng size kada box*/ 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   /* margin-bottom: 9vh 9vw;*/
+    margin-top: 5vh;;
+    padding: 1vh 1vw;
+    padding-bottom: 2vh;
+    background-color: rgb(175, 159, 130);    
+}
+/*
 .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    font-size: 4vmin;
+}*/
 
-.title h1{
+.container h1{
     color: black;
     font-size: 5vmin;
     font-weight: bold;
 }
 
-.title span{
+.container span{
     color:black;
     font-size: 3vmin;
     font-style: italic;
 }
 
-*{
-    box-sizing: border-box; /*key sa pagsame ng size kada box*/
-    margin: 0;
-    padding: 0;
-}
-
 .board{
-    min-width: 80.5vmin; /*need kasi may wrap tayo.. (10*8)+0.25+0.25 = 80.5*/
-    max-width: 80.5vmin; /*need kasi may wrap tayo*/
+    width: 80vmin; /*need kasi may wrap tayo.. (10*8)+0.25+0.25 = 80.5*/
+    height: 80vmin; /*need kasi may wrap tayo*/
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    border: 0.25vmin solid;
+    /*border: 0.25vmin solid;*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
     .box1 {
@@ -61,14 +80,81 @@ body {
         font-size: 8vmin;
     }
 
-    span {
+ .board span {
         color: white;
         animation-name: sample;
         animation-duration: 4s;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 8vmin;
     }
 
        /* @keyframes sample {
             from {color: white;}
             to {color: red;}
         }*/
+
+
+
+        #phon-white {
+            position: relative;
+            /* background-color: red; */
+            /* transition: position 2s; */
+            animation-name: phonw-move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+         }
+
+      /*  #horse-white {
+            position: relative;
+             background-color: red; 
+             transition: position 2s; 
+            animation-name: opening-move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+         } */
+         
+         @keyframes phonw-move {
+            0% {top: 0%;}
+            10% {top: 100%;}
+            20% {top: 200%;}
+            30% {top: 200%;}
+            /*40% {top: 200%; left: 0%;}
+            50% {top: 200%; left: 100%;}*/ /*pang horse na mo*/
+         }
+
+         #phon-black {
+            position: relative;
+            /* background-color: red; */
+            /* transition: position 2s; */
+            animation-name: phonb-move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+         }
+        
+         @keyframes phonb-move {
+            0% {bottom: 0%;}
+            10% {bottom: 100%;}
+            20% {bottom: 200%;}
+            30% {bottom: 200%;}
+         }
+
+         #bishop-white {
+            position: relative;
+            /* background-color: red; */
+            /* transition: position 2s; */
+            animation-name: bishop-move;
+            animation-duration: 30s;
+            animation-delay: 20s;
+            animation-iteration-count: infinite;
+         }
+      
+         @keyframes bishop-move {
+            0% {top: 0%;}
+            0% {top: 100%; left: 100%;}
+            10% {top: 200%; left: 200%;}
+            20% {top: 300%; left: 300%;}
+            30% {top: 400%; left: 400%;}
+            100% {top: 400%; left: 400%;}
+         }
     
