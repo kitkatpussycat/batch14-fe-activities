@@ -165,7 +165,7 @@ nav ul li a{
     background-position: center;
     background-size: cover;*/
     background-color: #D2C9C7;
-    height: 650px;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -195,8 +195,8 @@ nav ul li a{
 }*/
 
 #sampleWorks iframe {
-    width: 728px;
-    height: 408.2px;
+    width: 50vw;
+    height: 30vw;
 }
 
 /*#sampleWorks img, iframe {
@@ -266,8 +266,8 @@ nav ul li a{
     }*/
     
     #sampleWorks iframe {
-        width: 728px;
-        height: 408.2px;
+        width: 50vw;
+        height: 30vw;
     }
     
     /*#sampleWorks img, iframe {
@@ -320,8 +320,8 @@ nav ul li a{
     }
 
     #sampleWorks iframe {
-        width: 364px;
-        height: 204.1px;
+        width: 60vw;
+        height: 40vw;
     }
 }
 /*-----howItWorks-----*/
@@ -336,7 +336,7 @@ nav ul li a{
     align-items: center;
     padding: 0px 50px;
     text-align: justify;  
-    height: 650px; 
+    height: 110vh; 
 }
 
 #howItWorks span {
@@ -431,7 +431,7 @@ nav ul li a{
     background-position: center;
     background-repeat: repeat;*/
     background-color: #FBF7F4;
-    height: 650px;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -530,7 +530,7 @@ nav ul li a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 650px;
+    height: 110vh;
     padding: 5%;
 }
 
