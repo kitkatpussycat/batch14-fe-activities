@@ -50,13 +50,13 @@ function showTime(){
 
 //Set background and Greeting
 function setGreeting(){
-    let today = new Date(2021, 06, 10, 20, 33, 30),
-    //let today = new Date(),
+    //let today = new Date(2021, 06, 10, 20, 33, 30),
+    let today = new Date(),
     hour = today.getHours();
 
 if (hour < 12){
     //Morning
-    document.body.style.backgroundImage = "url('./images/wallpaper10.jpg')";
+    document.body.style.backgroundImage = "url('https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.6435-9/251556820_2436852903117533_8622550278804544570_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeFqa_arqS2XSj_YvhoZgyJQUCKqSoIHJGxQIqpKggckbJUunoUcMhiir4m67Y-zcsou-LhXdDUQ-_0388M4T37i&_nc_ohc=B5fpkh0ZYFgAX95axrb&tn=dsJwRmsUB9CjLS48&_nc_ht=scontent.fmnl9-1.fna&oh=1e538dff13509ec2219b9a05064e0c3f&oe=61A99DDA')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = 'cover';
     greeting.textContent = 'Goodmorning, ';
@@ -67,14 +67,14 @@ if (hour < 12){
 
 }else if (hour < 18){
     //Afternoon
-    document.body.style.backgroundImage = "url('./images/wallpaper7.jpg')";
+    document.body.style.backgroundImage = "url('https://scontent.fmnl9-2.fna.fbcdn.net/v/t1.6435-9/251913276_2436853639784126_2223111632482725008_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeEeB8Dbnx2-3VZxBb4tWpM8RWKMoeBuqI5FYoyh4G6ojvqsL03NApVj3cR1BJwATeK_jzOfWJniALLUNeVayE2m&_nc_ohc=PB7wNncyJj0AX-O3NP2&_nc_ht=scontent.fmnl9-2.fna&oh=aa645c11fdd6ce5512047b90d5f7f021&oe=61AA3DCA')";
     //document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = 'cover';
     greeting.textContent = 'Goodafternoon, ';
     document.body.style.color = 'white';
 }else {
     //evening
-    document.body.style.backgroundImage = "url('./images/wallpaper1.jpg')";
+    document.body.style.backgroundImage = "url('https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.6435-9/251873397_2436852686450888_5702713131512895629_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeEI_32JjtAUzHTgLkXpiJ5c7K0BQPe5w27srQFA97nDbnjzajsV_YkRCRGbAluz_rgBgUCw8EvS_neMjpFJSTt0&_nc_ohc=YlXVOn9SuFAAX_Z4dff&_nc_ht=scontent.fmnl9-1.fna&oh=6b80dafe5e662c9808d02190ecf962f0&oe=61AA8B4E')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = 'cover';
     greeting.textContent = 'Goodevening, ';
