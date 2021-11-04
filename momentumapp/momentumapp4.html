@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Kitkat-3</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./momentumapp4.css">
+    </head>
+
+    <body>
+
+        
+        <time id="day_date"></time>
+        <time id="time"><!--05:35:00 PM--></time>
+        <h1>
+            <span id="greeting"><!--Good afternoon--></span>
+            <span id="name" contenteditable="true"><!--Kitkat--></span>
+        </h1>
+
+        <h2 id="focus_today"><!--What is your main focus / todat's focus--></h2>
+        <h2 id="focus" contenteditable="true"><!--Rest--></h2><hr style="width: 25%;">
+
+        <div id="container">
+            <div id="output_button">
+            <div id="output">List of Quotes</div>
+            <button id="addNewQuote"  
+            style="cursor:pointer;">+</button>
+            </div>
+            <div id="container3">
+            <input id="newQuote" type="text" placeholder="Enter new Quote"><!--<button id="addNewQuote">+</button>-->
+            </div>
+        </div>
+        <button id="todo-button" style="cursor: pointer;" onclick="myFunction()">ToDo</button>
+        <div id="todo-container">
+            <div class="container2">
+                <p style="color:yellow; font-weight: bolder;">To do</p>
+                <small>click if completed <br> Right click to delete</small>
+                <input id="inputField" type="text" placeholder="Enter new to do...">
+                <div class ="to-dos" id="toDoContainer"></div>
+            </div>
+        </div>
+
+        <script src="./momentumapp4.js"></script>
+
+    </body>
+</html>

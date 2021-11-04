@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: black;
+    font-family: 'Zen Kurenaido', sans-serif;
+    /*opacity: 0.75;*/
+}
+
+#day_date {
+    padding-top: 5vh;
+    font-size: 2vw;
+    opacity: 0.75;
+}
+
+#time {
+    /*padding-top: 15vh;*/
+    font-size: 10vw;
+    opacity: 0.75;
+}
+
+h1{
+    margin-bottom: 5vw;
+    font-size: 7vh;
+    opacity: 0.75;
+}
+
+h2{
+    margin-bottom: 0.5rem;
+    opacity: 0.75;
+}
+
+#focus {
+    font-size: 5vh;
+    opacity: 0.75;
+}
+
+#container {
+    padding-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.75;
+}
+
+#output_button {
+    display: flex;
+    flex-direction: row;
+}
+
+#addNewQuote {
+    width: 1vw;
+    height: 2.5vh;
+    background-color: transparent;
+    border: none;
+    margin-left: 0.5vw;
+    color: orange;
+}
+
+#container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#newQuote {
+    width: 30vw;
+    border: none;
+    outline: none;
+    background-color:transparent;
+    display: none;
+    color: white;
+    text-align: center;
+}
+
+
+#todo-button{
+    position: fixed;
+    margin-left: 90vw;
+    margin-bottom:85vh;
+    border-radius: 5rem;
+    width: 5vw;
+    background-color:transparent;
+    opacity: 1;
+    color: white;
+    font-size: 1vw;
+}
+
+#todo-container{
+    width: 1vw;
+    height: 1vh;
+    position: fixed;
+    margin-left: 70vw;
+    margin-bottom: 80vh;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 5vh;*/
+    display: none;
+}
+
+.container2 {
+    width: 13vw;
+    background-color:black;
+    border-radius: 0.5rem;
+   /* transform: rotateZ(9deg);*/
+   opacity: 0.8;
+   border: 5px white solid;
+   
+}
+
+small{
+    color:rgb(40, 238, 40);
+}
+
+
+
+#inputField {
+    margin-top: 0;
+    margin-left: 0;
+    border:none;
+    outline: none;
+    font-size: 2vh;
+    background-color: transparent;
+    width: 13wv;
+    color: orange;
+}
+
+::placeholder {
+    color:white;
+    font-size: 1vw;
+    opacity: 0.5;
+}
+
+.paragraph-styling {
+    margin: 0;
+    cursor: pointer;
+    font-size: 2vh;
+    text-align: left;
+    color:white;
+}
+
+#addToDo {
+    background-color: transparent;
+    border: none
+}
