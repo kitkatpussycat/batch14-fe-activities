@@ -1,0 +1,79 @@
+#options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#options #xButton{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#xButton, #oButton{
+    border-radius: 5rem;
+    width: 50px; 
+    cursor: pointer;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.squareRow {
+    display: flex;
+}
+
+.square{
+    border: 1px solid black;
+    width:100px;
+    height: 100px;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size:100px;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 20px;
+    line-height:20px;
+}
+
+#turn {
+    color: red;
+}
+
+#winnerDiv{
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.counterRow{
+    display: flex;
+    flex-direction:row;
+    background-color:green;
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.restartContainer h2{
+text-align: center;
+font-size: 50px;
+}
+
+.hide {
+    display: none;
+}

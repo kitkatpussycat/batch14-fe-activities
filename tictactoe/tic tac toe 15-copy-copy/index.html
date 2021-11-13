@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"></link>
+    <title>Tic Tac Toe 15</title>
+</head>
+<body>
+    <div id="options">
+        <span>Choose Character:</span>
+        <button id="xButton">x</button>
+        <button id="oButton">O</button>
+    </div>
+    <div class="wrapper">
+        <div class="gameContainer" id="game">
+            <div class="squareRow">
+                <div class="square" id="square-0"></div>
+                <div class="square" id="square-1"></div>
+                <div class="square" id="square-2"></div>
+            </div>
+            <div class="squareRow">
+                <div class="square" id="square-3"></div>
+                <div class="square" id="square-4"></div>
+                <div class="square" id="square-5"></div>
+            </div>
+            <div class="squareRow">
+                <div class="square" id="square-6"></div>
+                <div class="square" id="square-7"></div>
+                <div class="square" id="square-8"></div>
+            </div>
+        </div>
+        <div class="infoContainer">
+            <div id="turn">Player's Turn</div>
+            <div id="winnerDiv">Winner Status: </div>
+            <!--<div id="gameCounter" class="gameCounterContainer">
+                <div class="counterRow">
+                    <div>Player (X):</div>
+                    <div id="playerOneCounter"></div>
+                </div>
+                <div class="counterRow">
+                    <div>Player (O):</div>
+                    <div id="playerTwoCounter"></div>
+                </div>
+            </div>-->
+            <div class="restartContainer">
+               <!-- <button id="restart">Play Again?</button>-->
+                <button id="previous">previous</button>
+                <button id="next">Next</button>
+                <button id="refresh">Refresh</button>
+                <h2 id="gameStatus"></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="Game.js"></script>
+</body>
+</html>
