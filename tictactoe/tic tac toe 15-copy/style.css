@@ -1,0 +1,191 @@
+body {
+    /*background-image: linear-gradient(to right top, #f8eaf9, #f5e1f5, #f1d8f1, #eecfed, #ebc6e9, #eac5e9, #e9c5e8, #e8c4e8, #e9cbec, #ebd2ef, #edd9f2, #efe0f5);*/
+   /* background-image: url('https://i.pinimg.com/736x/8a/7c/1b/8a7c1b61acd0ae42acbe0fcb8b8c38d0.jpg');*/
+  /* background-image: url('http://detective-conan.itudia.com/gallery/images/detective_conan_wallpaper_15.jpg');*/
+  /* background-image:url('https://c4.wallpaperflare.com/wallpaper/339/179/774/digital-art-low-poly-artwork-minimalism-wallpaper-preview.jpg');*/
+   /*background-image: url('https://media.istockphoto.com/vectors/vector-golden-foil-background-template-for-cards-hand-drawn-backdrop-vector-id1290163916?k=20&m=1290163916&s=612x612&w=0&h=5dcFldwxHfxtboFGdX6ostfFeJpfx6o6JPtHcYnAYwo=');*/
+   background-image: url('https://t3.ftcdn.net/jpg/03/33/40/12/240_F_333401222_ER7SICwV1riCGVepI4upkEwcRXy8FnKK.jpg');
+   background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Comforter Brush', cursive;
+   /* font-family: 'Lobster', cursive;*/
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#left{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#left div{
+    font-size: 25px;
+    color:rgb(112, 30, 30);
+    width: 50%;
+}
+
+#right{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#right div{
+    font-size: 25px;
+    color: rgb(112, 30, 30);
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+
+
+#whole {
+    width: 34%;
+    /*border:#e60073 1px solid;*/
+}
+#options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 5vh;
+    font-weight: 800;
+   /* border:#e60073 3px dashed;*/
+}
+
+#options span {
+    color:rgb(112, 30, 30);
+    font-size: 150%;
+}
+
+#options #xButton{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: inherit;
+    
+    /*opacity: 0.5;*/
+}
+
+#xButton, #oButton{
+    border-radius: 5rem;
+    width: 60px; 
+    cursor: pointer;
+    font-family: inherit;
+    border: 1px solid rgb(112, 30, 30);
+    background-color: transparent;
+    /*opacity: 0.5;*/
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.squareRow {
+    display: flex;
+}
+
+.square{
+    border: 5px solid rgb(112, 30, 30);
+    width:90px;
+    height: 90px;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size:60px;
+    margin: 5px;
+   /* opacity: 0.5;*/
+    /*display: inline-block;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;*/
+    color: rgb(112, 30, 30);
+}
+
+.infoContainer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 20px;
+    line-height:20px;
+}
+
+#turn {
+    /*color: #FFC0CB;*/
+    color: rgb(112, 30, 30);
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#winnerDiv{
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer #refresh {
+    width: 100px;
+    background-color: transparent;
+    border-radius: 5rem;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    color: red;
+    font-weight: 800;
+    font-size:20px;
+    cursor: pointer;
+}
+
+#prevNext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#prevNext #previous, #next {
+    background-color: azure;
+    margin: 5px 5px;
+    border-radius: 5rem;
+    font-family: inherit;
+    width: 100px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.buttonContainer h2{
+text-align: center;
+font-size: 50px;
+margin-top: 15px;
+color:rgb(150, 133, 35);
+}
+
+.hide {
+    display: none;
+}
+
+.pink {
+    color: pink;
+}
+
+.azure {
+    color: azure;
+}

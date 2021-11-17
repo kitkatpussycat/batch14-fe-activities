@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css"></link>
+    <title>Tic Tac Toe 15</title>
+</head>
+<body>
+<div id="left">
+    <div>mechanics: <br>
+    1. choose player first (X or O) <br>
+    2. Players take turns putting their marks in empty squares. <br>
+    3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner. <br>
+    4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
+    </div>
+</div>
+<div id="whole">
+    <div id="options">
+        <span>Choose Character:</span>
+        <button id="xButton">X</button>
+        <button id="oButton">O</button>
+    </div>
+    <div class="wrapper">
+        <div class="gameContainer" id="game">
+            <div class="squareRow">
+                <div class="square" id="square-0"></div>
+                <div class="square" id="square-1"></div>
+                <div class="square" id="square-2"></div>
+            </div>
+            <div class="squareRow">
+                <div class="square" id="square-3"></div>
+                <div class="square" id="square-4"></div>
+                <div class="square" id="square-5"></div>
+            </div>
+            <div class="squareRow">
+                <div class="square" id="square-6"></div>
+                <div class="square" id="square-7"></div>
+                <div class="square" id="square-8"></div>
+            </div>
+        </div>
+        <div class="infoContainer">
+            <div id="turn">Watch-out!</div>
+          <!-- <div id="winnerDiv">Winner Status: </div>-->
+          
+            <div class="buttonContainer">
+
+                <button id="refresh">Restart</button>
+                <div id="prevNext">
+                <button id="previous">Previous</button>
+                <button id="next">Next</button>
+                </div>
+                
+                <h2 id="gameStatus"></h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="right">
+    <div>designed by: ilovekmp...❤</div>
+</div>
+
+
+    <script src="main.js"></script>
+    <script src="Game.js"></script>
+</body>
+</html>
