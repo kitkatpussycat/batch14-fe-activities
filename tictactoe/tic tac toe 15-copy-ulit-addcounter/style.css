@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*#mainMain{
+    display: none;
+}*/
+
+#firstOverlay{
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2020/04/blue-aesthetic-wallpaper-13-920x518.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lobster', cursive;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#op{
+    width: 50%;
+    background-color: white;
+   /* margin-left: 22%;*/
+    /*margin-top: 20%;*/
+    border:rgb(112, 30, 30) 3px solid;
+    border-radius: 2rem;
+    font-family: 'Lobster', cursive;
+    font-size: 150%;
+    padding:10px;
+}
+
+#op #firstButton{
+    margin-left: 40%;
+    border-radius: 2rem;
+    width: 20vmin; 
+    cursor: pointer;
+    font-family: inherit;
+    border: 1px solid rgb(112, 30, 30);
+    background-color: transparent;
+    font-size: 5vmin;
+}
+
+#options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 2vh;
+    font-weight: 800;
+   /* border:#e60073 3px dashed;*/
+}
+
+#options span {
+    color:rgb(112, 30, 30);
+    font-size: 8vmin;
+}
+
+#options #xButton{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: inherit;
+    
+    /*opacity: 0.5;*/
+}
+
+#xButton:hover{
+    background-color:pink;
+}
+
+#oButton:hover{
+    background-color:#729AF3;
+}
+
+#xButton, #oButton{
+    border-radius: 2rem;
+    width: 15vmin; 
+    cursor: pointer;
+    font-family: inherit;
+    border: 1px solid rgb(112, 30, 30);
+    background-color: transparent;
+    color: rgb(112, 30, 30);
+    font-size: 5vmin;
+    /*opacity: 0.5;*/
+}
+
+#mainOverlay {
+    /*background-image: linear-gradient(to right top, #f8eaf9, #f5e1f5, #f1d8f1, #eecfed, #ebc6e9, #eac5e9, #e9c5e8, #e8c4e8, #e9cbec, #ebd2ef, #edd9f2, #efe0f5);*/
+   /* background-image: url('https://i.pinimg.com/736x/8a/7c/1b/8a7c1b61acd0ae42acbe0fcb8b8c38d0.jpg');*/
+  /* background-image: url('http://detective-conan.itudia.com/gallery/images/detective_conan_wallpaper_15.jpg');*/
+  /* background-image:url('https://c4.wallpaperflare.com/wallpaper/339/179/774/digital-art-low-poly-artwork-minimalism-wallpaper-preview.jpg');*/
+   /*background-image: url('https://media.istockphoto.com/vectors/vector-golden-foil-background-template-for-cards-hand-drawn-backdrop-vector-id1290163916?k=20&m=1290163916&s=612x612&w=0&h=5dcFldwxHfxtboFGdX6ostfFeJpfx6o6JPtHcYnAYwo=');*/
+  /* background-image: url('https://t3.ftcdn.net/jpg/03/33/40/12/240_F_333401222_ER7SICwV1riCGVepI4upkEwcRXy8FnKK.jpg');*/
+  background-image: url('https://wallpaperboat.com/wp-content/uploads/2020/04/blue-aesthetic-wallpaper-for-pc-9-920x518.jpg');
+   background-size: cover;
+    background-position: center;
+    height: 100vh;
+   /* font-family: 'sans-serif';*/
+   font-family: 'Lobster', cursive;
+   /*overflow: hidden;*/
+    display: flex;
+    justify-content: center;
+}
+
+#left{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#left div{
+    font-size: 4vmin;
+    /*color:rgb(112, 30, 30);*/
+    color: white;
+    width: 50%;
+}
+
+#right{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#right div{
+    font-size: 4vmin;
+    /*color: rgb(112, 30, 30);*/
+    color: white;
+   /* margin-bottom: 30px;*/
+    width: 50%;
+}
+
+.refresh{
+    margin-top:200px;
+    width: 20vmin;
+    background-color: transparent;
+    border-radius: 5rem;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    color: red;
+    font-weight: 800;
+    font-size:20px;
+    cursor: pointer;
+}
+
+div#winnerDiv {
+    font-family: inherit;
+    font-size: 10vmin;
+}
+
+#gameCounter {
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid white;*/
+}
+
+.counterRow{
+    display: flex;
+    flex-direction: row;
+}
+
+div#designedBy{
+    margin-top: 400px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    font-size: 2vmin;
+}
+
+
+#whole {
+    width: 34%;
+    /*border:#e60073 1px solid;*/
+}
+
+
+#headlines{
+    text-align: center;
+    font-size:200%;
+    color: rgb(150, 133, 35);
+    font-weight: 900;
+}
+
+
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0vh;
+}
+
+.squareRow {
+    display: flex;
+}
+
+.square{
+    /*border: 5px solid rgb(112, 30, 30);*/
+    border: 5px solid white;
+    width:14vmin;
+    height: 14vmin;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+    font-size:12vmin;
+    margin: 1vmin;
+    /*opacity: 0.5;*/
+    /*display: inline-block;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;*/
+    /*color: rgb(112, 30, 30);*/
+    color: red;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 20px;
+    line-height:20px;
+}
+
+#turn {
+    /*color: #FFC0CB;*/
+    /*color: rgb(112, 30, 30);*/
+    color: brown;
+    font-size: 5vmin;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer #playAgain{
+    width: 20vmin;
+    background-color: transparent;
+    border-radius: 5rem;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    color: red;
+    font-weight: 800;
+    font-size:20px;
+    cursor: pointer;
+}
+
+#prevNext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#prevNext #previous, #next {
+    background-color: azure;
+    margin: 5px 5px;
+    border-radius: 5rem;
+    font-family: inherit;
+    width: 100px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.buttonContainer h2{
+text-align: center;
+font-size: 50px;
+margin-top: 30px;
+color:rgb(150, 133, 35);
+}
+
+
+/* #lastOverlay{
+
+    background-image: url('https://wallpaperboat.com/wp-content/uploads/2020/04/blue-aesthetic-wallpaper-1920x1080-2-920x518.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+#resCheck{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#resCheck #checkHistory, #restart{
+    border-radius: 2rem;
+    width: 50vmin; 
+    cursor: pointer;
+    font-family: 'Comforter Brush', cursive;
+    border: 1px solid rgb(112, 30, 30);
+    background-color: white;
+    font-size: 10vmin;
+    color: rgb(112, 30, 30);
+} */
+
+/*#winnerDiv{
+    font-size: 25vmin;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:rgb(150, 133, 35);
+    font-family: 'Comforter Brush', cursive;
+}*/
+
+.hide {
+    display: none;
+}
+
+.pink {
+    color: pink;
+}
+
+.azure {
+    color: azure;
+}
