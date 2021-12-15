@@ -1,31 +1,41 @@
-import React, { useState, useEffect, useContext } from "react";
-import AddEditModal from "./AddEditModal";
-import { stateContext } from "./context/StateContextProvider";
+import React, { useState, useEffect } from "react";
 
-function List({ status, setStatus, selected, setSelected, search, setSearch }) {
-  const { state, dispatch } = useContext(stateContext);
-
+function List({
+  loading,
+  people = [],
+  setPeople,
+  status,
+  setStatus,
+  selected,
+  setSelected,
+  search,
+  setSearch,
+  state,
+  dispatch,
+}) {
   const handleDelete = (e, name) => {
-    dispatch({ type: "DELETE_PERSON", action: name });
+    setPeople(people.filter((person) => person.name !== name));
   };
 
-  // const handleEdit = (e, name) => {
-  //   setStatus("edit");
-  //   setSelected(name);
-  // };
-  const [filteredNames, setFilteredNames] = useState([]);
+  const handleEdit = (e, name) => {
+    dispatch({ type: "EDIT" });
+    setStatus("edit");
+    setSelected(name);
+    // setName(name);
+  };
+  const [filteredNames, setFilteredNames] = useState(people);
 
   useEffect(() => {
     if (search === "") {
-      setFilteredNames(state.people);
+      setFilteredNames(people);
     } else {
       setFilteredNames(
-        state.people.filter((person) => {
+        people.filter((person) => {
           return person.name.toLowerCase().includes(search);
         })
       );
     }
-  }, [state.people, search]);
+  }, [people, search]);
 
   return (
     <div>
@@ -35,12 +45,11 @@ function List({ status, setStatus, selected, setSelected, search, setSearch }) {
         ) : (
           filteredNames.map((person) => (
             <li>
-              <span onClick={() => dispatch({ type: "OPEN_MODAL" })}>
+              <span onClick={(e) => handleEdit(e, person.name)}>
                 {person.name}
               </span>
-              {state.openModal && <AddEditModal />}
               <button
-                className="btn-gradient"
+                className="btn-blue"
                 onClick={(e) => handleDelete(e, person.name)}
               >
                 delete

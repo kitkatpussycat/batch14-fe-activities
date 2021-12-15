@@ -1,9 +1,16 @@
 import React, { useState, useContext } from "react";
 import ReactDOM from "react-dom";
-import { stateContext } from "./context/StateContextProvider";
-function AddEditModal({ status, selected, setSelected, setStatus }) {
+
+function AddEditModal({
+  status,
+  selected,
+  setSelected,
+  setStatus,
+  dispatch,
+  setPeople,
+  people,
+}) {
   const [name, setName] = useState("");
-  const { state, dispatch } = useContext(stateContext);
 
   const handleClose = () => {
     setName("");
@@ -17,16 +24,37 @@ function AddEditModal({ status, selected, setSelected, setStatus }) {
 
   const handleAdd = (e) => {
     e.preventDefault();
-
     if (status === "add") {
-      dispatch({ type: "ADD_PERSON", payload: { name: name } });
+      setPeople([...people, { name: name }]);
       setName("");
     } else if (status === "edit") {
+      setPeople(
+        people.map((person) => {
+          return person.name === selected ? { name: name } : person;
+        })
+      );
       setStatus("add");
     }
     setName("");
     dispatch({ type: "CLOSE_MODAL" });
   };
+
+  // const addNameBtn = (e) => {
+  //   e.preventDefault();
+
+  //   if (status === "add") {
+  //     setPeople([...people, { name: name }]);
+  //     setName("");
+  //   } else if (status === "edit") {
+  //     setPeople(
+  //       people.map((person) => {
+  //         return person.name === selected ? { name: name } : person;
+  //       })
+  //     );
+  //     setStatus("add");
+  //   }
+  //   setName("");
+  // };
 
   return ReactDOM.createPortal(
     <div className="modalBackGround">

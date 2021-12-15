@@ -1,25 +1,30 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import AddEditModal from "./AddEditModal";
-import { stateContext } from "./context/StateContextProvider";
+import AddEditModal from "../components/AddEditModal";
+
 function Header({
+  people,
+  setPeople,
+  count,
+  setCount,
   status,
   setStatus,
   selected,
   setSelected,
   search,
   setSearch,
+  state,
+  dispatch,
 }) {
-  // const API_URL = "https://swapi.dev/api";
-  // const fetch = async () => {
-  //   const data = await axios.get(`${API_URL}/people/${count + 1}`);
+  const API_URL = "https://swapi.dev/api";
+  const fetch = async () => {
+    const data = await axios.get(`${API_URL}/people/${count + 1}`);
 
-  //   setPeople([...people, data.data]);
-  //   setCount((count) => count + 1);
-  // };
+    setPeople([...people, data.data]);
+    setCount((count) => count + 1);
+  };
 
   const [name, setName] = useState("");
-  // const [openModal, setOpenModal] = useState(false);
 
   // const onInput = (e) => {
   //   setName(e.target.value);
@@ -49,18 +54,13 @@ function Header({
   useEffect(() => setName(selected), [selected]);
   console.log(name);
 
-  const { state, dispatch } = useContext(stateContext);
-
   return (
     <div>
-      <div className="bg-gradient-to-r from-blue-300 to-indigo-700 h-20 flex justify-center items-center mb-6">
-        <h1>Fetch Exercise</h1>
-      </div>
+      <h1>Fetch Exercise</h1>
       <div>
         {/* <input
           className="input-style"
           type="text"
-          placeholder="Add Name"
           value={name}
           onChange={(e) => {
             onInput(e);
@@ -70,7 +70,7 @@ function Header({
           className="input-style"
           type="text"
           placeholder="search"
-          value={name}
+          // value={name}
           onChange={(e) => {
             onSearch(e);
           }}
@@ -78,21 +78,24 @@ function Header({
         <p>{status}</p>
       </div>
       <div>
-        <button className="btn-gradient" onClick={(e) => fetch(e)}>
+        <button className="btn-blue" onClick={(e) => fetch(e)}>
           Fetch
         </button>
-        <button
-          className="btn-gradient"
-          onClick={() => dispatch({ type: "OPEN_MODAL" })}
-        >
+        <button className="btn-blue" onClick={() => dispatch({ type: "ADD" })}>
           Add
         </button>
         {state.openModal && (
           <AddEditModal
-            setStatus={setStatus}
-            status={status}
+            people={people}
+            setPeople={setPeople}
             selected={selected}
             setSelected={setSelected}
+            status={status}
+            setStatus={setStatus}
+            search={search}
+            setSearch={setSearch}
+            state={state}
+            dispatch={dispatch}
           />
         )}
       </div>
