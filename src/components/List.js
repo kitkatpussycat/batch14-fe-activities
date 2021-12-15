@@ -1,56 +1,57 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import AddEditModal from "./AddEditModal";
+import { stateContext } from "./context/StateContextProvider";
 
-function List({
-  loading,
-  people = [],
-  setPeople,
-  status,
-  setStatus,
-  selected,
-  setSelected,
-  search,
-  setSearch,
-}) {
+function List({ status, setStatus, selected, setSelected, search, setSearch }) {
+  const { state, dispatch } = useContext(stateContext);
+
   const handleDelete = (e, name) => {
-    setPeople(people.filter((person) => person.name !== name));
+    dispatch({ type: "DELETE_PERSON", action: name });
   };
 
-  const handleEdit = (e, name) => {
-    setStatus("edit");
-    setSelected(name);
-  };
-  const [filteredNames, setFilteredNames] = useState(people);
+  // const handleEdit = (e, name) => {
+  //   setStatus("edit");
+  //   setSelected(name);
+  // };
+  const [filteredNames, setFilteredNames] = useState([]);
 
   useEffect(() => {
     if (search === "") {
-      setFilteredNames(people);
+      setFilteredNames(state.people);
     } else {
       setFilteredNames(
-        people.filter((person) => {
+        state.people.filter((person) => {
           return person.name.toLowerCase().includes(search);
         })
       );
     }
-  }, [people, search]);
+  }, [state.people, search]);
 
   return (
     <div>
       <ul>
-        {loading ? (
+        {state.loading ? (
           <p>Loading...</p>
         ) : (
           filteredNames.map((person) => (
             <li>
-              <span onClick={(e) => handleEdit(e, person.name)}>
+              <span onClick={() => dispatch({ type: "OPEN_MODAL" })}>
                 {person.name}
               </span>
-              <button onClick={(e) => handleDelete(e, person.name)}>
+              {state.openModal && <AddEditModal />}
+              <button
+                className="btn-gradient"
+                onClick={(e) => handleDelete(e, person.name)}
+              >
                 delete
               </button>
             </li>
           ))
         )}
       </ul>
+      {state.errorMsg && (
+        <h1 className="text-center text-lg text-red-500">{state.errorMsg}</h1>
+      )}
     </div>
   );
 }

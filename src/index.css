@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  /* backdrop-filter: blur(5px); */
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.modalCard {
+  backdrop-filter: blur(5px);
+}
+
+.modalBackGround {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  /* width: 500px; */
+  /* height: 200px; */
+  /* height: fit-content; */
+  border-radius: 12px;
+  /* background-color:white; */
+  box-shadow: rgba(177, 123, 123, 0.35) 0px 5px 15px;
+  /* display: flex;
+  flex-direction: column; */
+  /* padding: 25px; */
+}
+
+@layer base {
+  h1 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl text-center mb-3 mt-3 font-extrabold text-purple-600;
+  }
+  h2 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-purple-700;
+  }
+}
+p {
+  @apply text-xs sm:text-sm md:text-xl lg:text-xl xl:text-xl 2xl:text-xl text-indigo-600;
+}
+
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-5;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-blue-400 to-purple-600  hover:bg-purple-500 text-white font-bold py-2 px-4 rounded mx-5;
+  }
+
+  .btn-gradient-dark {
+    @apply bg-gradient-to-r from-red-400 to-pink-600 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded mx-5;
+  }
+
+  .glass {
+    @apply bg-gradient-to-br from-gray-400 to-transparent  bg-opacity-20 shadow-md;
+  }
+
+  .input-style {
+    @apply shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 leading-tight;
+  }
 }
