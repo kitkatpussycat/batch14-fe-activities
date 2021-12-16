@@ -76,13 +76,15 @@ const reducer = (state, action) => {
 };
 
 function App() {
-  const API_URL = "https://swapi.dev/api";
+  // const API_URL = "https://swapi.dev/api";
+  const API_URL = "https://swapi.py4e.com/api";
   const [loading, setLoading] = useState(false);
   const [people, setPeople] = useState([]);
   const [count, setCount] = useState(31);
   const [selected, setSelected] = useState(undefined);
   const [status, setStatus] = useState("add");
   const [search, setSearch] = useState("");
+  const [name, setName] = useState({ first_name: "", last_name: "" });
 
   const getData = async (persons = 30) => {
     let p = [];
@@ -143,6 +145,8 @@ function App() {
         setSearch={setSearch}
         state={state}
         dispatch={dispatch}
+        name={name}
+        setName={setName}
       />
       <List
         people={people}
@@ -156,6 +160,8 @@ function App() {
         setSearch={setSearch}
         state={state}
         dispatch={dispatch}
+        name={name}
+        setName={setName}
       />
     </div>
   );

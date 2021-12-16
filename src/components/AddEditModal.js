@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 function AddEditModal({
@@ -9,8 +9,11 @@ function AddEditModal({
   dispatch,
   setPeople,
   people,
+  name = [],
+  setName,
+  state,
 }) {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState({ first_name: "", last_name: "" });
 
   const handleClose = () => {
     setName("");
@@ -18,19 +21,26 @@ function AddEditModal({
     dispatch({ type: "CLOSE_MODAL" });
   };
 
-  const onInput = (e) => {
-    setName(e.target.value);
-  };
+  // const onInput = (e) => {
+  //   setName(e.target.value);
+  // };
 
   const handleAdd = (e) => {
     e.preventDefault();
-    if (status === "add") {
-      setPeople([...people, { name: name }]);
+    if (name.last_name === "") {
+      setName({
+        first_name: name.first_name,
+        last_name: "robot",
+      });
+    } else if (status === "add") {
+      setPeople([...people, { name: `${name.first_name} ${name.last_name}` }]);
       setName("");
     } else if (status === "edit") {
       setPeople(
         people.map((person) => {
-          return person.name === selected ? { name: name } : person;
+          return person.name === selected
+            ? { name: `${name.first_name} ${name.last_name}` }
+            : person;
         })
       );
       setStatus("add");
@@ -38,23 +48,6 @@ function AddEditModal({
     setName("");
     dispatch({ type: "CLOSE_MODAL" });
   };
-
-  // const addNameBtn = (e) => {
-  //   e.preventDefault();
-
-  //   if (status === "add") {
-  //     setPeople([...people, { name: name }]);
-  //     setName("");
-  //   } else if (status === "edit") {
-  //     setPeople(
-  //       people.map((person) => {
-  //         return person.name === selected ? { name: name } : person;
-  //       })
-  //     );
-  //     setStatus("add");
-  //   }
-  //   setName("");
-  // };
 
   return ReactDOM.createPortal(
     <div className="modalBackGround">
@@ -64,15 +57,20 @@ function AddEditModal({
         </div>
         <div className="body flex-col">
           <input
-            className="input-style"
+            className="input-style w-full"
             type="text"
             placeholder="Add Name"
-            value={name}
-            onChange={(e) => {
-              onInput(e);
-            }}
+            value={name.first_name}
+            onChange={(e) => setName({ ...name, first_name: e.target.value })}
           />
-          <p>{name}</p>
+          <input
+            className="input-style w-full"
+            type="text"
+            placeholder="Add Name"
+            value={name.last_name}
+            onChange={(e) => setName({ ...name, last_name: e.target.value })}
+          />
+          <p>{name.first_name}</p>
         </div>
         <div className="footer">
           <button

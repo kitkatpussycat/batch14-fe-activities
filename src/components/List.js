@@ -12,6 +12,7 @@ function List({
   setSearch,
   state,
   dispatch,
+  setName,
 }) {
   const handleDelete = (e, name) => {
     setPeople(people.filter((person) => person.name !== name));
@@ -21,8 +22,25 @@ function List({
     dispatch({ type: "EDIT" });
     setStatus("edit");
     setSelected(name);
-    // setName(name);
+    setName({ name: `${name.first_name} ${name.last_name}` });
   };
+
+  const whenSelected = (selected) => {
+    if (selected) {
+      const tempArr = selected.split(" ");
+
+      if (tempArr.length < 3) {
+        setName({ first_name: tempArr[0], last_name: tempArr[1] });
+      } else {
+        setName({
+          first_name: `${tempArr[0]} ${tempArr[1]}`,
+          last_name: tempArr[2],
+        });
+      }
+    }
+  };
+  useEffect(() => whenSelected(state.selected), [state.selected]);
+
   const [filteredNames, setFilteredNames] = useState(people);
 
   useEffect(() => {

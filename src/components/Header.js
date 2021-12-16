@@ -16,7 +16,8 @@ function Header({
   state,
   dispatch,
 }) {
-  const API_URL = "https://swapi.dev/api";
+  // const API_URL = "https://swapi.dev/api";
+  const API_URL = "https://swapi.py4e.com/api";
   const fetch = async () => {
     const data = await axios.get(`${API_URL}/people/${count + 1}`);
 
@@ -96,6 +97,8 @@ function Header({
             setSearch={setSearch}
             state={state}
             dispatch={dispatch}
+            name={name}
+            setName={setName}
           />
         )}
       </div>
