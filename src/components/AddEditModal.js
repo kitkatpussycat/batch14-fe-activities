@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 function AddEditModal({
@@ -9,11 +9,11 @@ function AddEditModal({
   dispatch,
   setPeople,
   people,
-  name = [],
-  setName,
+  // name = [],
+  // setName,
   state,
 }) {
-  // const [name, setName] = useState({ first_name: "", last_name: "" });
+  const [name, setName] = useState({ first_name: "", last_name: "" });
 
   const handleClose = () => {
     setName("");
@@ -27,7 +27,7 @@ function AddEditModal({
 
   const handleAdd = (e) => {
     e.preventDefault();
-    if (name.last_name === "") {
+    if (name.last_name === undefined) {
       setName({
         first_name: name.first_name,
         last_name: "robot",
@@ -35,6 +35,7 @@ function AddEditModal({
     } else if (status === "add") {
       setPeople([...people, { name: `${name.first_name} ${name.last_name}` }]);
       setName("");
+      dispatch({ type: "CLOSE_MODAL" });
     } else if (status === "edit") {
       setPeople(
         people.map((person) => {
@@ -44,10 +45,26 @@ function AddEditModal({
         })
       );
       setStatus("add");
+      setName("");
+      dispatch({ type: "CLOSE_MODAL" });
     }
-    setName("");
-    dispatch({ type: "CLOSE_MODAL" });
   };
+
+  const whenSelected = (selected) => {
+    if (selected) {
+      const tempArr = selected.split(" ");
+      console.log("nag rurun ba to?");
+      if (tempArr.length < 3) {
+        setName({ first_name: tempArr[0], last_name: tempArr[1] });
+      } else {
+        setName({
+          first_name: `${tempArr[0]} ${tempArr[1]}`,
+          last_name: tempArr[2],
+        });
+      }
+    }
+  };
+  useEffect(() => whenSelected(selected), [selected]);
 
   return ReactDOM.createPortal(
     <div className="modalBackGround">

@@ -97,8 +97,8 @@ function Header({
             setSearch={setSearch}
             state={state}
             dispatch={dispatch}
-            name={name}
-            setName={setName}
+            // name={name}
+            // setName={setName}
           />
         )}
       </div>
